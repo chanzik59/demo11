@@ -1,0 +1,7 @@
+#nacos:
+#  config:
+#    auto-refresh: true
+#    server-addr: localhost:8848
+#    bootstrap:
+#      enable: true
+#    data-id: test
