@@ -1,6 +1,19 @@
 spring:
+  application:
+    name: test
   cloud:
     nacos:
       server-addr: localhost:8848
-  application:
-    name: test
+      config:
+        file-extension: properties
+        extension-configs:
+          - data-id: test1.properties
+            refresh: true
+          - data-id: test2.properties
+            refresh: true
+            group: dev
+
+
+
+
+
