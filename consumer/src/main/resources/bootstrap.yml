@@ -13,6 +13,9 @@ spring:
             refresh: true
             group: dev
 
+      discovery:
+        enabled: false
+
 
 
 

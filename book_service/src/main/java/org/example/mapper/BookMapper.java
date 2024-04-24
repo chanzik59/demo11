@@ -2,7 +2,6 @@ package org.example.mapper;
 
 import org.apache.ibatis.annotations.Insert;
 import org.example.entity.Book;
-import org.example.entity.User;
 
 /**
  * @author czq

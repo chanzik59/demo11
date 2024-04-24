@@ -5,3 +5,11 @@
 #    bootstrap:
 #      enable: true
 #    data-id: test
+
+server:
+  port: 8082
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8091/eureka
+
