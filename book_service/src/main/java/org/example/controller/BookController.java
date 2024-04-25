@@ -1,9 +1,9 @@
 package org.example.controller;
 
 import org.example.entity.Book;
-
 import org.example.service.BookService;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
@@ -23,8 +23,15 @@ public class BookController {
 
     @RequestMapping("add")
     @ResponseBody
-    public String add(Book book){
+    public String add(Book book) {
         return String.valueOf(bookService.addBook(book));
+    }
+
+
+    @RequestMapping("get/{id}")
+    @ResponseBody
+    public Book add(@PathVariable("id") Long id) {
+        return bookService.getBook(id);
     }
 
 }

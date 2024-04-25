@@ -2,6 +2,8 @@ package org.example.entity;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @author czq
  * @date 2024/4/23 17:14
@@ -9,12 +11,12 @@ import lombok.Data;
  */
 
 @Data
-public class User {
+public class Book implements Serializable {
     private Long id;
 
     private String name;
 
-    private Integer age;
+    private Integer num;
 
 
 

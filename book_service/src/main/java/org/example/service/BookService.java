@@ -11,4 +11,7 @@ import org.example.entity.Book;
 public interface BookService {
 
     int addBook(Book book);
+
+
+    Book getBook(Long id);
 }

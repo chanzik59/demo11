@@ -1,12 +1,14 @@
 spring:
   application:
-    name: user_service
+    name: user-service
   cloud:
     nacos:
       server-addr: localhost:8848
       config:
         file-extension: yml
         refresh-enabled: true
+#      discovery:
+#        cluster-name: BJ
 
 
 

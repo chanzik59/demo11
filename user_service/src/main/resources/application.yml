@@ -1,3 +1,21 @@
 server:
-  port: 8081
-
+  port: 8082
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+feign:
+  httpclient:
+    enabled: true
+    max-connections: 100
+    max-connections-per-route: 10
+dubbo:
+  application:
+    name: user-service1
+  registry:
+    address: nacos://localhost:8848
+    check: false
+  protocol:
+    port: 21881
+    name: dubbo
+  consumer:
+    check: false

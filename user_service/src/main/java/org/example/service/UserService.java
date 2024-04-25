@@ -10,4 +10,7 @@ import org.example.entity.User;
 public interface UserService {
 
     int addUser(User user);
+
+
+    User  findUser(Long id);
 }

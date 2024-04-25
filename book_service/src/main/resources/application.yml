@@ -1,4 +1,15 @@
 server:
   port: 8081
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+dubbo:
+  application:
+    name: book-service
+  registry:
+    address: nacos://localhost:8848
+  protocol:
+    port: 21880
+    name: dubbo
 
 

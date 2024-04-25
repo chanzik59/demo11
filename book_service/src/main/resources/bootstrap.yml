@@ -1,12 +1,15 @@
 spring:
   application:
-    name: book_service
+    name: book-service
   cloud:
     nacos:
       server-addr: localhost:8848
       config:
         file-extension: yml
         refresh-enabled: true
+#      discovery:
+#        cluster-name: SH
+
 
 
 
