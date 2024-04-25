@@ -4,6 +4,7 @@ import org.example.config.FeignConfig;
 import org.example.entity.Book;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -18,6 +19,10 @@ public interface FeignService {
 
     @RequestMapping("/book/get/{id}")
     Book getBook(@PathVariable("id") Long id);
+
+
+    @RequestMapping("/book/add")
+    String add(@RequestBody Book book);
 
 
 }

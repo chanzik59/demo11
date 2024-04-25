@@ -20,7 +20,9 @@ public class BookServiceImpl implements BookService {
 
     @Override
     public int addBook(Book book) {
-        return bookMapper.insert(book);
+        bookMapper.insert(book);
+
+        throw new RuntimeException("模拟异常");
     }
 
     @Override

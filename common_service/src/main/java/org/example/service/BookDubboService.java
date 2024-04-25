@@ -11,4 +11,6 @@ public interface BookDubboService {
 
 
     Book getById(Long id);
+
+    int addBook(Book book);
 }

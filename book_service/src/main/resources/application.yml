@@ -11,5 +11,17 @@ dubbo:
   protocol:
     port: 21880
     name: dubbo
-
-
+seata:
+  enabled: true
+  registry:
+    type: nacos
+    nacos:
+      application: seata-server
+      server-addr: localhost:8848
+      group: DEFAULT_GROUP
+      cluster: default
+  tx-service-group: test
+  service:
+    vgroup-mapping:
+      test: default
+  data-source-proxy-mode: AT

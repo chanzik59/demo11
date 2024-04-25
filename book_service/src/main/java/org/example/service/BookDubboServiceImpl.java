@@ -22,6 +22,11 @@ public class BookDubboServiceImpl implements BookDubboService {
     public Book getById(Long id) {
         return bookMapper.getBy(id);
     }
+
+    @Override
+    public int addBook(Book book) {
+       return  bookMapper.insert(book);
+    }
 }
 
 

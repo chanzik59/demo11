@@ -11,7 +11,7 @@ import org.example.entity.Book;
  */
 public interface BookMapper {
 
-    @Insert("insert into  book(name,num) values(#{name},#{num})")
+    @Insert("insert into  book(id,name,num) values(#{id},#{name},#{num})")
     int insert(Book book);
 
 

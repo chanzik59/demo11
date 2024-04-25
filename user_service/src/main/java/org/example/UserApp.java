@@ -14,7 +14,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableFeignClients(clients = FeignService.class)
 @MapperScan(basePackages = "org.example.mapper")
 @SpringBootApplication
-@EnableDubbo
+//@EnableDubbo
 public class UserApp {
     public static void main(String[] args) {
         SpringApplication.run(UserApp.class);

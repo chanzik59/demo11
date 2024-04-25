@@ -8,6 +8,7 @@ feign:
     enabled: true
     max-connections: 100
     max-connections-per-route: 10
+    connection-timeout: 3000
 dubbo:
   application:
     name: user-service1
@@ -19,3 +20,18 @@ dubbo:
     name: dubbo
   consumer:
     check: false
+
+seata:
+  enabled: true
+  registry:
+    type: nacos
+    nacos:
+      application: seata-server
+      server-addr: localhost:8848
+      group: DEFAULT_GROUP
+      cluster: default
+  tx-service-group: test
+  service:
+    vgroup-mapping:
+      test: default
+  data-source-proxy-mode: AT
