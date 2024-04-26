@@ -1,6 +1,8 @@
 package org.example.controller;
 
+import com.alibaba.csp.sentinel.slots.block.BlockException;
 import io.seata.spring.annotation.GlobalTransactional;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.example.entity.Book;
 import org.example.entity.User;
@@ -14,12 +16,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author czq
  * @date 2024/4/23 17:33
  * @Description:
  */
+@Slf4j
 @RequestMapping("user")
 @Controller
 public class UserController {
@@ -42,10 +46,16 @@ public class UserController {
 
     @RequestMapping("get/{id}")
     @ResponseBody
+//    @SentinelResource(value ="/user/get/{id}"  ,blockHandler = "blockHandler")
     public Book findUserBook(@PathVariable("id") Long id) {
         User user = userService.findUser(id);
         return bookDubboService.getById(user.getBookId());
 
+    }
+
+    public Book blockHandler(Long id, BlockException e) {
+        log.error("进入流控管理", e);
+        return new Book();
     }
 
     @RequestMapping("get1/{id}")
@@ -94,6 +104,18 @@ public class UserController {
         book.setNum(10);
         book.setId(user.getBookId());
         feignService.add(book);
+        return "成功";
+    }
+
+
+    @RequestMapping("sentinel")
+    @ResponseBody
+    public String sentinel() {
+        try {
+            TimeUnit.SECONDS.sleep(2);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         return "成功";
     }
 

@@ -25,3 +25,9 @@ seata:
     vgroup-mapping:
       test: default
   data-source-proxy-mode: AT
+
+spring:
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8080

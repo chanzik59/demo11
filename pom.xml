@@ -31,6 +31,7 @@
         <mybatis.version>2.1.2</mybatis.version>
         <dubbo.version>3.0.11</dubbo.version>
         <seata.version>1.8.0</seata.version>
+        <sentinel.adapter.version>1.8.6</sentinel.adapter.version>
     </properties>
 
 
@@ -113,8 +114,19 @@
                     </exclusion>
                 </exclusions>
             </dependency>
-        </dependencies>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
+                <version>${spring.cloud.version}</version>
+            </dependency>
 
+            <!-- https://mvnrepository.com/artifact/com.alibaba.csp/sentinel-dubbo-adapter -->
+            <dependency>
+                <groupId>com.alibaba.csp</groupId>
+                <artifactId>sentinel-dubbo-adapter</artifactId>
+                <version>${sentinel.adapter.version}</version>
+            </dependency>
+        </dependencies>
 
     </dependencyManagement>
 

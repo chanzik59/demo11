@@ -1,5 +1,6 @@
 package org.example.service;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import org.example.entity.User;
 import org.example.mapper.UserMapper;
 import org.springframework.stereotype.Service;
@@ -22,6 +23,7 @@ public class UserServiceImpl implements UserService {
         return userMapper.insert(user);
     }
 
+    @SentinelResource("findUser")
     @Override
     public User findUser(Long id) {
         return userMapper.get(id);

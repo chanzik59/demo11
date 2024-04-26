@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.annotation.Resource;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author czq
@@ -33,6 +34,11 @@ public class BookController {
     @RequestMapping("get/{id}")
     @ResponseBody
     public Book add(@PathVariable("id") Long id) {
+//        try {
+//            TimeUnit.SECONDS.sleep(2);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
         return bookService.getBook(id);
     }
 
