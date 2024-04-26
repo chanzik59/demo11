@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 /**
  * Hello world!
  */
-//@EnableDubbo
+@EnableDubbo
 @MapperScan(basePackages = "org.example.mapper")
 @SpringBootApplication
 public class BookApp {

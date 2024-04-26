@@ -20,6 +20,7 @@
         <module>book_service</module>
         <module>eureka_server</module>
         <module>common_service</module>
+        <module>gateway_service</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -44,9 +45,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
-
-
     </dependencies>
 
     <dependencyManagement>
@@ -93,14 +91,11 @@
                 <artifactId>spring-cloud-starter-openfeign</artifactId>
                 <version>${spring.cloud.version}</version>
             </dependency>
-            <!-- https://mvnrepository.com/artifact/org.apache.dubbo/dubbo-spring-boot-starter -->
             <dependency>
                 <groupId>org.apache.dubbo</groupId>
                 <artifactId>dubbo-spring-boot-starter</artifactId>
                 <version>${dubbo.version}</version>
             </dependency>
-
-            <!-- https://mvnrepository.com/artifact/io.seata/seata-spring-boot-starter -->
             <dependency>
                 <groupId>io.seata</groupId>
                 <artifactId>seata-spring-boot-starter</artifactId>

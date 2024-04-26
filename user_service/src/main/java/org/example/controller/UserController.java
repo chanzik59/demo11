@@ -66,8 +66,7 @@ public class UserController {
         book.setName("小张1");
         book.setNum(10);
         int i = bookDubboService.addBook(book);
-        throw new RuntimeException("模拟测试");
-//        return "成功";
+        return "成功";
 
     }
 
