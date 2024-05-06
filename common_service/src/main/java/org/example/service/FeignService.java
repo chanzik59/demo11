@@ -13,7 +13,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @Description:
  */
 //@FeignClient(value = "book-service", configuration = FeignConfig.class)
-@FeignClient(value = "book-service")
+//@FeignClient(value = "book-service" ,fallback = FeignServiceFallBack.class)
+@FeignClient(value = "book-service" )
 public interface FeignService {
 
 

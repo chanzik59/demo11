@@ -34,11 +34,6 @@ public class BookController {
     @RequestMapping("get/{id}")
     @ResponseBody
     public Book add(@PathVariable("id") Long id) {
-//        try {
-//            TimeUnit.SECONDS.sleep(2);
-//        } catch (InterruptedException e) {
-//            throw new RuntimeException(e);
-//        }
         return bookService.getBook(id);
     }
 
