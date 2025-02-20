@@ -1,0 +1,5 @@
+spring:
+  test:
+    msg: "测试1"
+server:
+  port: 8084

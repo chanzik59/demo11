@@ -1,0 +1,6 @@
+server:
+  port: 8085
+spring:
+  test:
+    msg: "测试2"
+

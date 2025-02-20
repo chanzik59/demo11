@@ -1,5 +1,6 @@
 package org.example.service;
 
+import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import io.seata.core.context.RootContext;
 import io.seata.rm.tcc.api.BusinessActionContext;
 import org.example.entity.User;
@@ -19,6 +20,7 @@ import java.util.Objects;
 
 
 @Service
+@SentinelResource
 public class TccUserServiceImpl implements TccUserService {
 
     @Resource

@@ -11,23 +11,26 @@ dubbo:
   protocol:
     port: 21880
     name: dubbo
-seata:
-  enabled: true
-  registry:
-    type: nacos
-    nacos:
-      application: seata-server
-      server-addr: localhost:8848
-      group: DEFAULT_GROUP
-      cluster: default
-  tx-service-group: test
-  service:
-    vgroup-mapping:
-      test: default
-  data-source-proxy-mode: AT
 
 spring:
-  cloud:
-    sentinel:
-      transport:
-        dashboard: localhost:8080
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 123456
+    url: jdbc:mysql://localhost:3306/book?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8
+#seata:
+#  enabled: true
+#  registry:
+#    type: nacos
+#    nacos:
+#      application: seata-server
+#      server-addr: localhost:8848
+#      group: DEFAULT_GROUP
+#      cluster: default
+#  tx-service-group: test
+#  service:
+#    vgroup-mapping:
+#      test: default
+#  data-source-proxy-mode: AT
+
+

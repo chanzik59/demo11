@@ -41,3 +41,9 @@ spring:
       transport:
         dashboard: localhost:8080
       web-context-unify: false
+rocketmq:
+  name-server: 192.168.204.128:7981
+  producer:
+    group: default_group
+    retry-times-when-send-async-failed: 2
+    retry-next-server: true

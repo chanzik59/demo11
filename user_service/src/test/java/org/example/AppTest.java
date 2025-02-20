@@ -2,6 +2,8 @@ package org.example;
 
 
 import com.alibaba.nacos.api.config.annotation.NacosValue;
+import org.apache.rocketmq.common.message.Message;
+import org.apache.rocketmq.spring.core.RocketMQTemplate;
 import org.example.entity.User;
 import org.example.service.UserService;
 import org.junit.jupiter.api.Test;
@@ -26,12 +28,13 @@ public class AppTest {
     private UserService userService;
 
 
+    @Resource
+    private RocketMQTemplate rocketMQTemplate;
+
+
     @Test
     public void test(){
-        User user = new User();
-        user.setName("小芳");
-        user.setAge(20);
-        userService.addUser(user);
+        rocketMQTemplate.syncSend("aa","bb");
     }
 
 
