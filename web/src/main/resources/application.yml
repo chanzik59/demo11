@@ -1,22 +1,28 @@
 server:
-  port: 8083
-spring:
-  test:
-    msg: "accessType=1&acqInsCode=48213930&bizType=000000&currencyCode=156&encoding=UTF-8&merId=821393073990PDL&orderId=2408221701010122173257120001PA01&reqReserved=2408221701010122173257120001:PA00001:CT000009&respCode=00&respMsg=交易成功&signMethod=21&txnAmt=100&txnSubType=23&txnTime=20240822173259&txnType=01&version=5.1.0&signPubKeyCert=-----BEGIN CERTIFICATE-----
-MIIC2DCCAnygAwIBAgIFEFeJJpgwDAYIKoEcz1UBg3UFADBcMQswCQYDVQQGEwJD
-TjEwMC4GA1UECgwnQ2hpbmEgRmluYW5jaWFsIENlcnRpZmljYXRpb24gQXV0aG9y
-aXR5MRswGQYDVQQDDBJDRkNBIFRFU1QgU00yIE9DQTEwHhcNMjMxMTAzMDExMDU2
-WhcNMjgxMTE0MDgxMTQwWjB9MQswCQYDVQQGEwJDTjEMMAoGA1UECgwDQk9DMRMw
-EQYDVQQLDApDRkNBVGVjaFRFMRkwFwYDVQQLDBBPcmdhbml6YXRpb25hbC0yMTAw
-LgYDVQQDDCdDRkNBVGVjaFRFQHVuaW9ucGF5VGVzdEBadW5pb25wYXlUZXN0QDcw
-WTATBgcqhkjOPQIBBggqgRzPVQGCLQNCAAQK3a3aqhPYvAIOooEAsgq/X0FuuRD9
-7h3i/7aY1aeQlWMz0YAB0iR99XL6KbGOpdN1ZEpYEK/8rg4EBVG4L/cXo4IBBjCC
-AQIwHwYDVR0jBBgwFoAUa/4Y2o9COqa4bbMuiIM6NKLBMOEwDAYDVR0TAQH/BAIw
-ADBIBgNVHSAEQTA/MD0GCGCBHIbvKgEBMDEwLwYIKwYBBQUHAgEWI2h0dHA6Ly93
-d3cuY2ZjYS5jb20uY24vdXMvdXMtMTQuaHRtMDkGA1UdHwQyMDAwLqAsoCqGKGh0
-dHA6Ly91Y3JsLmNmY2EuY29tLmNuL1NNMi9jcmw1Mzg0OC5jcmwwDgYDVR0PAQH/
-BAQDAgbAMB0GA1UdDgQWBBRNpKrm1ISKbgv2JI7r5MVA1UQy3jAdBgNVHSUEFjAU
-BggrBgEFBQcDAgYIKwYBBQUHAwQwDAYIKoEcz1UBg3UFAANIADBFAiBWHD4v84Ky
-O85r43tsJf9UROi1xKORNfI+F+D5tGcpHgIhAIg0jAbWrpEDCJtRTKtG9tS2l9+3
-h6aGPnAL/Y4nOqP2
------END CERTIFICATE-----&signature=C96huf8iNEFIddAn6jZWimzOYBlNuzEN4RjUv04+FyAEFc6c/5z7nBgve6yFDYVyLrNLSCX9VgB2fJFCBqe7Fw=="
+  port: 8084
+
+
+
+
+#spring:
+#  datasource:
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    username: root
+#    password: 123456
+#    url: jdbc:mysql://localhost:3306/book?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8&rewriteBatchedStatements=true
+
+#    local:
+#      driver-class-name: com.mysql.cj.jdbc.Driver
+#      username: root
+#      password: 123456
+#      url: jdbc:mysql://localhost:3306/book?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2B8&rewriteBatchedStatements=true
+#
+#    ucp:
+#      driver-class-name: oracle.jdbc.OracleDriver
+#      username: ucpcenter
+#      password: ucpcenter
+#      url: oracle:thin:@192.168.30.76:1521:ucpdc
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#    default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler
